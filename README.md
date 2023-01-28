@@ -33,8 +33,14 @@ Requirements
 
 ToDo
 -------
+
 * Add more Sources
 * Add more topics
+
+Bugs
+-------
+
+* NewsAPI free version only supports development so cannot deploy to production
 
 Support
 -------
