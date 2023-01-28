@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+News Website
+============
 
-## Available Scripts
+This is  a news website, built using React and [Chakra UI](https://chakra-ui.com/) and [NewsAPI.org](https://newsapi.org/). The website displays the latest news from various sources and categories.
 
-In the project directory, you can run:
+Getting started
+---------------
 
-### `npm start`
+1.  Clone this repository to your local machine.
+2.  Run `npm install` to install the required dependencies.
+3.  Set up an account with [NewsAPI.org](https://newsapi.org/) and get an API key.
+4.  Create a `.env` file in the root directory of the project and add the following line:
+    
+    `REACT_APP_NEWS_API_SOURCE=<NEWS_SOURCE>`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    `REACT_APP_NEWS_API_KEY=<YOUR_API_KEY>`
+    
+5.  Run `npm start` to start the development server.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Features
+--------
 
-### `npm test`
+*   Displays the latest news from Tech Sources.
+*   Built with a modern and responsive design using Chakra UI.
+*   Lightweight and fast performance.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Requirements
+------------
 
-### `npm run build`
+*   React.js and npm.
+*   An account with [NewsAPI.org](https://newsapi.org/).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+ToDo
+-------
+* Add more Sources
+* Add more topics
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Support
+-------
 
-### `npm run eject`
+If you have any questions or need help with the source code, please don't hesitate to reach out. You can contact me through GitHub.
+## Authors
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [@10cyrilc](https://www.github.com/10cyrilc)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Support Me
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<a href="https://www.buymeacoffee.com/10cyrilc" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
