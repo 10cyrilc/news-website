@@ -58,7 +58,7 @@ function App() {
         <Box textAlign="center" fontSize="xl">
           <Grid minH="100vh" p={3}>
             <HStack pb={5} justifyContent='space-between'>
-              <Heading>CNews</Heading>
+              <Heading>News</Heading>
               <ColorModeSwitcher />
             </HStack>
             <SimpleGrid spacing={6} px={3} justify='center' templateColumns='repeat(auto-fill, minmax(300px, 1fr))'>
