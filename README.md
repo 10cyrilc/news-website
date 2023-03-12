@@ -1,55 +1,41 @@
-News Website
-============
+# News Website
 
-This is  a news website, built using React and [Chakra UI](https://chakra-ui.com/) and [NewsAPI.org](https://newsapi.org/). The website displays the latest news from various sources and categories.
+This is a news website, built using React and [Chakra UI](https://chakra-ui.com/) and [NewsAPI](https://inshorts.deta.dev). The website displays the latest news from various sources and Technology Category.
 
-Getting started
----------------
+## Getting started
 
 1.  Clone this repository to your local machine.
 2.  Run `npm install` to install the required dependencies.
-3.  Set up an account with [NewsAPI.org](https://newsapi.org/) and get an API key.
-4.  Create a `.env` file in the root directory of the project and add the following line:
-    
+3.  Create a `.env` file in the root directory of the project and add the following line:
+
     `REACT_APP_NEWS_API_SOURCE=<NEWS_SOURCE>`
 
     `REACT_APP_NEWS_API_KEY=<YOUR_API_KEY>`
-    
-5.  Run `npm start` to start the development server.
 
-Features
---------
+4.  Run `npm start` to start the development server.
 
-*   Displays the latest news from Tech Sources.
-*   Built with a modern and responsive design using Chakra UI.
-*   Lightweight and fast performance.
+## Features
 
-Requirements
-------------
+- Displays the latest news from Tech Sources.
+- Built with a modern and responsive design using Chakra UI.
+- Lightweight and fast performance.
 
-*   React.js and npm.
-*   An account with [NewsAPI.org](https://newsapi.org/).
+## Requirements
 
+- React.js and npm.
 
-ToDo
--------
+## ToDo
 
-* Add more Sources
-* Add more topics
+- Add more Sources
+- Add more topics
 
-Bugs
--------
-
-* NewsAPI free version only supports development so cannot deploy to production
-
-Support
--------
+## Support
 
 If you have any questions or need help with the source code, please don't hesitate to reach out. You can contact me through GitHub.
+
 ## Authors
 
 - [@10cyrilc](https://www.github.com/10cyrilc)
-
 
 ## Support Me
 
