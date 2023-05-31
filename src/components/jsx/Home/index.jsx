@@ -49,7 +49,6 @@ function Home() {
   };
   const handleSortChange = (event) => {
     setSort(event.target.value);
-    console.log(event);
   };
 
   // Fetch News
