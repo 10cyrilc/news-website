@@ -74,7 +74,7 @@ function Home() {
         new Date(b?.date?.split(",")[0] + " " + b?.time)
     );
     setNews(newNews);
-    setReversedNews(news?.slice().reverse());
+    setReversedNews(newNews?.slice().reverse());
   }, [fetchedNews]);
 
   if (fetchedNews.success && error === null) {
