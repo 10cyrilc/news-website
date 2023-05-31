@@ -2,6 +2,10 @@
 
 This is a news website, built using React and [Material UI](https://mui.com/) and [Inshorts-News-API](https://github.com/cyberboysumanjay/Inshorts-News-API). The website displays the latest news from various sources and Categories.
 
+## Demo
+
+Demo for this app is available at [news.10cyrilc.me](https://news.10cyrilc.me)
+
 ## Getting started
 
 1.  Clone this repository to your local machine.
