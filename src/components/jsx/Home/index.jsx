@@ -190,7 +190,7 @@ const CardRender = ({ item }) => {
           color={colors.light[200]}
           sx={{ fontSize: "1.3em", textDecoration: "none" }}
         >
-          Read Mode
+          Read More
         </Link>
       </CardActions>
     </Card>
