@@ -18,6 +18,7 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../data";
 import { tokens } from "../../../theme";
+import ScrollToTop from "react-scroll-to-top";
 
 function Home() {
   const [category, setCategory] = useState("all");
@@ -65,7 +66,6 @@ function Home() {
   }, [category]);
 
   // Sort News
-
   useEffect(() => {
     const newNews = fetchedNews?.data?.sort(
       (a, b) =>
@@ -76,9 +76,24 @@ function Home() {
     setReversedNews(newNews?.slice().reverse());
   }, [fetchedNews]);
 
+  // Render News if fetched
   if (fetchedNews.success && error === null) {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
     return (
       <Box>
+        <ScrollToTop
+          smooth
+          width="25"
+          height="15"
+
+          // svgPath={
+          //   <ArrowCircleUpIcon
+          //     sx={{ color: colors.primary[400] }}
+          //     color="primary"
+          //   />
+          // }
+        />
         <Box display="flex" justifyContent="space-between" p="20px 50px">
           <Box sx={{ minWidth: 120 }}>
             <FormControl>
@@ -116,7 +131,7 @@ function Home() {
             flexWrap="wrap"
           >
             {news.map((item) => (
-              <CardRender item={item} key={item.id} />
+              <CardRender item={item} key={item.id} colors={colors} />
             ))}
           </Box>
         ) : (
@@ -128,19 +143,21 @@ function Home() {
             flexWrap="wrap"
           >
             {reversedNews?.map((item) => (
-              <CardRender item={item} key={item.id} />
+              <CardRender item={item} key={item.id} colors={colors} />
             ))}
           </Box>
         )}
       </Box>
     );
   } else if (error !== null) {
+    // Show Error
     return (
       <Box display="flex" justifyContent="center" alignItems="center">
         Error While Loading: {error}
       </Box>
     );
   } else {
+    // Show loading screen
     return (
       <Box
         display="flex"
@@ -159,9 +176,7 @@ function Home() {
     );
   }
 }
-const CardRender = ({ item }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+const CardRender = ({ item, colors }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
