@@ -1,1 +1,1 @@
-export const BASE_URL = "https://inshorts.deta.dev/news?category=";
+export const BASE_URL = "https://api.news.10cyrilc.me/news?category=";
