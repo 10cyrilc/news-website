@@ -1,22 +1,9 @@
-import {
-    Box,
-    Card,
-    CardActions,
-    CardContent,
-    CardMedia,
-    CircularProgress,
-    FormControl,
-    InputLabel,
-    Link,
-    MenuItem,
-    Select,
-    Typography,
-    useTheme,
-} from "@mui/material";
-import  {useEffect, useState} from "react";
+import {Box, CircularProgress, FormControl, InputLabel, MenuItem, Select, useTheme,} from "@mui/material";
+import {useEffect, useState} from "react";
 import {tokens} from "../../theme.jsx";
-import ScrollToTop from "react-scroll-to-top";
 import {getNews, getNewsCategories} from "../../api/apiManager.js";
+import NewsCard from "./NewsCard.jsx";
+import ScrollToTopButton from "../../components/ScrollToTop.jsx";
 
 function Home() {
     const theme = useTheme();
@@ -79,18 +66,7 @@ function Home() {
     if (fetchedNews.success && error === null) {
         return (
             <Box>
-                <ScrollToTop
-                    smooth
-                    width="25"
-                    height="15"
-
-                    // svgPath={
-                    //   <ArrowCircleUpIcon
-                    //     sx={{ color: colors.primary[400] }}
-                    //     color="primary"
-                    //   />
-                    // }
-                />
+                <ScrollToTopButton />
                 <Box display="flex" justifyContent="space-between" p="20px 50px">
                     <Box sx={{minWidth: 120}}>
                         <FormControl>
@@ -128,7 +104,7 @@ function Home() {
                         flexWrap="wrap"
                     >
                         {news.map((item) => (
-                            <CardRender item={item} key={item.title} colors={colors}/>
+                            <NewsCard item={item} key={item.title} colors={colors}/>
                         ))}
                     </Box>
                 ) : (
@@ -140,7 +116,7 @@ function Home() {
                         flexWrap="wrap"
                     >
                         {reversedNews?.map((item) => (
-                            <CardRender item={item} key={item.title} colors={colors}/>
+                            <NewsCard item={item} key={item.title} colors={colors}/>
                         ))}
                     </Box>
                 )}
@@ -174,40 +150,5 @@ function Home() {
     }
 }
 
-const CardRender = ({item, colors}) => {
-    return (
-        <Card sx={{maxWidth: 345}}>
-            <CardMedia
-                component="img"
-                alt={item.title}
-                height="340"
-                image={item.imageUrl}
-            />
-            <CardContent>
-                <Typography variant="body2" pt="10px" color="text.secondary">
-                    Published On: {item.date} , {item.time}
-                </Typography>
-                <Typography variant="body2" pt="10px" color="text.secondary">
-                    Author: {item.author}
-                </Typography>
-                <Typography gutterBottom variant="h5" component="div" pt="20px">
-                    {item.title}
-                </Typography>
-                <Typography variant="p" color="text.secondary">
-                    {item.content}
-                </Typography>
-            </CardContent>
-            <CardActions sx={{display: "flex", justifyContent: "center"}}>
-                <Link
-                    href={item.readMoreUrl}
-                    color={colors.light[200]}
-                    sx={{fontSize: "1.3em", textDecoration: "none"}}
-                >
-                    Read More
-                </Link>
-            </CardActions>
-        </Card>
-    );
-};
 
 export default Home;

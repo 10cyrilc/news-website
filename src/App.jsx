@@ -3,8 +3,6 @@ import Home from "./pages/Home";
 import TopBar from "./components/Topbar";
 
 function App() {
-    // const theme = useTheme();
-    // const colors = tokens(theme.palette.mode);
 
     return (
         <>
