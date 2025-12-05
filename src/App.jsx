@@ -1,15 +1,17 @@
-import {Divider} from "@mui/material";
-import Home from "./pages/Home";
+import { Box, Divider } from "@mui/material";
 import TopBar from "./components/Topbar";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
-
     return (
-        <>
-            <TopBar/>
-            <Divider/>
-            <Home/>
-        </>
+        <div className="app">
+            <main className="content">
+                <TopBar />
+                <Home />
+                <Footer />
+            </main>
+        </div>
     );
 }
 
